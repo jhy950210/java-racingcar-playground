@@ -1,9 +1,12 @@
+import org.assertj.core.api.Assertions;
 import org.assertj.core.util.Strings;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import static org.assertj.core.api.Assertions.*;
 
 public class CarsTest {
     @Test
@@ -12,7 +15,7 @@ public class CarsTest {
         String[] split = input.split(",");
         List<String> strings = Arrays.stream(split).collect(Collectors.toList());
 
-        Cars cars = new Cars(strings);
+        assertThat(strings.size()).isEqualTo(3);
     }
 
     @Test
