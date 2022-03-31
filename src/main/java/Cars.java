@@ -21,16 +21,8 @@ public class Cars {
 
     public void play() {
         for (Car car : cars) {
-            car.play(new RandomNumber().getNumber());
+            car.play();
         }
     }
 
-    public void printResult() {
-        String result = "";
-        for (Car car : cars) {
-            result += car.getName() + " : " + car.getPosition() + "\n";
-        }
-
-        System.out.println(result);
-    }
 }

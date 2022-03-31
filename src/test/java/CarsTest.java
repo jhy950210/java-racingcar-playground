@@ -27,7 +27,5 @@ public class CarsTest {
         Cars cars = new Cars(strings);
 
         cars.play();
-
-        cars.printResult();
     }
 }

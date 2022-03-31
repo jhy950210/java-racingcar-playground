@@ -21,8 +21,7 @@ class CarTest {
 
         assertThatThrownBy(() -> {
             Car car = new Car("testtest");
-        }).isInstanceOf(IllegalArgumentException.class)
-                        .hasMessageContaining("자동차 이름 길이 오류.");
+        }).isInstanceOf(IllegalArgumentException.class);
 
     }
 }
