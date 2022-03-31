@@ -2,7 +2,7 @@ public class ValidationUtils {
     private static final int MAX_CAR_NAME_LENGTH = 5;
 
     public static boolean isValidCarNameLength(String carName){
-        if(carName.length() <= MAX_CAR_NAME_LENGTH){
+        if(carName.length() <= MAX_CAR_NAME_LENGTH || carName.length() != 0){
             return true;
         }
         return false;
