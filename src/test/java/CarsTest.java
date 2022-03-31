@@ -1,16 +1,19 @@
+
+
 import org.assertj.core.api.Assertions;
-import org.assertj.core.util.Strings;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.*;
 
+
 public class CarsTest {
     @Test
-    void 경주에_참가할_자동차_이름() {
+    void 자동차_이름_split() {
         String input = "pobi,crong,honux";
         String[] split = input.split(",");
         List<String> strings = Arrays.stream(split).collect(Collectors.toList());
@@ -18,14 +21,4 @@ public class CarsTest {
         assertThat(strings.size()).isEqualTo(3);
     }
 
-    @Test
-    void 경주_1회() {
-        String input = "pobi,crong,honux";
-        String[] split = input.split(",");
-        List<String> strings = Arrays.stream(split).collect(Collectors.toList());
-
-        Cars cars = new Cars(strings);
-
-        cars.play();
-    }
 }
