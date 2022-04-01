@@ -6,12 +6,12 @@ public class Car {
     private int position;
 
     public Car(final String carName) {
-        if(!ValidationUtils.isValidCarNameLength(carName)){
-            throw new IllegalArgumentException("자동차 이름 길이 오류.");
-        }
+        this(carName,START_POSITION);
+    }
 
+    public Car(String carName, int position) {
         this.name = new Name(carName);
-        this.position = START_POSITION;
+        this.position = position;
     }
 
     public void play() {
@@ -31,4 +31,7 @@ public class Car {
         return position;
     }
 
+    public String getName() {
+        return this.name.getName();
+    }
 }
