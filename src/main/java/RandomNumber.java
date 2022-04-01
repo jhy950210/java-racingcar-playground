@@ -5,15 +5,19 @@ public class RandomNumber {
     private final int number;
 
     public RandomNumber() {
-        Random random = new Random();
-        this.number = random.nextInt(MAX_BOUND);
+        int randomNumber = new Random().nextInt(MAX_BOUND);
+        if (!ValidationUtils.isValidRandomNo(randomNumber)){
+            throw new IllegalArgumentException("범위 밖의 랜덤 숫자.");
+        }
+        this.number = randomNumber;
     }
 
-    public int getNumber() {
-        return number;
+
+    public boolean greaterThan(int number) {
+        return this.number >= number;
     }
 
-    public boolean greaterThan(int forwardNumber) {
-        return number >= forwardNumber;
+    public boolean lessThan(int number) {
+        return this.number <= number;
     }
 }
