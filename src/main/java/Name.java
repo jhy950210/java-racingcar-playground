@@ -5,7 +5,7 @@ public class Name {
     private final String name;
 
     public Name(String name) {
-        if(name.length() >= MAX_CAR_NAME_LENGTH || name.length() == 0){
+        if(!ValidationUtils.isValidCarNameLength(name)){
             throw new IllegalArgumentException("이름 길이 오류.");
         }
         this.name = name;

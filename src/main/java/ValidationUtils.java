@@ -9,7 +9,7 @@ public class ValidationUtils {
     }
 
     public static boolean isValidRandomNo(int randomNumber) {
-        if(0 <= randomNumber && randomNumber <= 9){
+        if(0 <= randomNumber && randomNumber <= 9 ){
             return true;
         }
         return false;
